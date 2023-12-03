@@ -28,5 +28,33 @@ void imprimirMatriz(int filas, int columnas, int matriz[filas][columnas]) {
     printf("\n");
 }
 
+int main() {
+    int num_matrices, filas, columnas;
+    printf("Ingrese el numero de matrices: ");
+    scanf("%d", &num_matrices);
+    printf("Ingrese el numero de filas: ");
+    scanf("%d", &filas);
+    printf("Ingrese el numero de columnas: ");
+    scanf("%d", &columnas);
+
+    int arreglo_tridimensional[num_matrices][filas][columnas];
+
+    inicializarUltimaMatrizEnUnos(num_matrices, filas, columnas, arreglo_tridimensional);
+// Se inicializa la última matriz en unos
+  
+    for (int k = 0; k < num_matrices - 1; k++) {
+        inicializarMatrizCeros(filas, columnas, arreglo_tridimensional[k]);
+    }
+//Se inicializan todas las matrices que sena de ceros
+  
+    for (int k = 0; k < num_matrices; k++) {
+        printf("Matriz %d:\n", k + 1);
+        imprimirMatriz(filas, columnas, arreglo_tridimensional[k]);
+    }
+ // En esta pate se imprimen las matrices
+    return 0;
+}
+
+
 
 
