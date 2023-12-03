@@ -43,5 +43,19 @@ int main() {
     int matrizA[filas][columnas];
     int matrizB[filas][columnas];
     int matrizC[filas][columnas];
+
+    printf("Matriz A:\n");
+    llenarMatrizAleatoria(filas, columnas, matrizA); 
+    imprimirMatriz(filas, columnas, matrizA); 
+// Llenamos la matriz A y la imprimimos
+    printf("Matriz B:\n");
+    llenarMatrizAleatoria(filas, columnas, matrizB); 
+    imprimirMatriz(filas, columnas, matrizB); 
+// Llenamos la matriz B y la imprimimos
+    printf("Resultado de la suma:\n");
+    sumarMatrices(filas, columnas, matrizA, matrizB, matrizC); 
+    imprimirMatriz(filas, columnas, matrizC); 
+//Aqui se almacena el resultado de la suma y se imprime
+    return 0;
 }
 
