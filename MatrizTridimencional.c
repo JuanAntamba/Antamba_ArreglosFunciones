@@ -17,4 +17,16 @@ void inicializarUltimaMatrizEnUnos(int num_matrices, int filas, int columnas, in
     }
 }
 
+// Se crea una funcion para imprimir la matriz
+void imprimirMatriz(int filas, int columnas, int matriz[filas][columnas]) {
+    for (int i = 0; i < filas; i++) {
+        for (int j = 0; j < columnas; j++) {
+            printf("%d ", matriz[i][j]);
+        }
+        printf("\n");
+    }
+    printf("\n");
+}
+
+
 
