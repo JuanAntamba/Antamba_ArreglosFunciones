@@ -21,3 +21,13 @@ void imprimirMatriz(int filas, int columnas, int matriz[filas][columnas]) {
     }
     printf("\n"); 
 }
+
+//En esta parte se crea la funcion para sumar las matrices y de esta forma crear la tercera matriz
+void sumarMatrices(int filas, int columnas, int matrizA[filas][columnas], int matrizB[filas][columnas], int matrizC[filas][columnas]) {
+    for (int i = 0; i < filas; i++) {
+        for (int j = 0; j < columnas; j++) {
+            matrizC[i][j] = matrizA[i][j] + matrizB[i][j]; // Suma los elementos correspondientes y los almacena en la matriz resultado
+        }
+    }
+}
+
